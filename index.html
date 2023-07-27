@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>42 Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tektur&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="title">42 Timer</h1>
+        <input type="text" value="..."></input>
+        <hr style="border: 1px solid #373737;">
+        <h1><span id="hour">00</span> : <span id="minute">00</span> : <span id="second">00</span></h1>
+        <form>
+            <label>
+                Hour <input id="s_hour" type="number" min="0" max="23" value="00">
+            </label>
+            <label>
+                Minute <input id="s_minute" type="number" min="0" max="59" value="00">
+            </label>
+            <label>
+                Second <input id="s_second" type="number" min="0" max="59" value="00">
+            </label>
+        </form>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+        <a href="https://github.com/codewitheren" target="_blank"><p>by muerdoga</p></a>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

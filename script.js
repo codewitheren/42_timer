@@ -21,37 +21,26 @@ var btn_reset = document.getElementById("reset");
 //prevents screen from sleeping
 navigator.wakeLock.request('screen');
 
+
 s_hour.addEventListener("change", () =>{
-    if(s_hour.value < 10)
-        hour.textContent = "0" + s_hour.value;
-    else
-        hour.textContent = s_hour.value;
-    if(s_hour.value >= 24){
-        s_hour.value = "23";
+    hour.textContent = String(s_hour.value).slice(-2).padStart(2,"0");
+    if(s_hour.value >= 24)
         hour.textContent = "23";
-    }
+    s_hour.value = hour.textContent;
 });
 
 s_min.addEventListener("change", () =>{
-    if(s_min.value < 10)
-        min.textContent = "0" + s_min.value;
-    else
-        min.textContent = s_min.value;
-    if(s_min.value >= 60){
-        s_min.value = "59";
+    min.textContent = String(s_min.value).slice(-2).padStart(2,"0");
+    if(s_min.value >= 60)
         min.textContent = "59";
-    }
+    s_min.value = min.textContent;
 });
 
 s_sec.addEventListener("change", () =>{
-    if(s_sec.value < 10)
-        sec.textContent = "0" + s_sec.value;
-    else
-        sec.textContent = s_sec.value;   
-    if(s_sec.value >= 60){
-        s_sec.value = "59";
+    sec.textContent = String(s_sec.value).slice(-2).padStart(2,"0");   
+    if(s_sec.value >= 60)
         sec.textContent = "59";
-    }
+    s_sec.value = sec.textContent;
 });
 
 btn_start.addEventListener("click", startTimer);
